@@ -1,0 +1,33 @@
+/* Estilo del contenedor que alinea los elementos */
+.input-container {
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Alinea verticalmente el ícono y el input */
+  padding: 10px;
+  border: 1px solid #ccc; /* Borde del contenedor */
+  border-radius: 5px;
+}
+
+/* Estilo del icono */
+.input-container i {
+  font-size: 1.5rem; /* Tamaño del icono */
+  margin-right: 8px; /* Espacio entre el ícono y el input */
+  vertical-align: middle; /* Alinea el icono al centro verticalmente */
+  line-height: 1; /* Asegura que el line-height no afecte la alineación */
+}
+
+/* Estilo del input */
+.input-container input {
+  border: none; /* Sin bordes en el input */
+  background-color: transparent; /* Fondo transparente */
+  outline: none; /* Sin borde al enfocarse */
+  font-size: 1rem; /* Tamaño del texto en el input */
+  flex: 1; /* Ocupa todo el espacio restante */
+  padding: 0; /* Elimina el padding interno */
+  height: 100%; /* Asegura que el input ocupe el alto disponible */
+  line-height: 1; /* Asegura que el line-height sea coherente */
+}
+
+
+.input-container:focus-within {
+  border: 2px solid #000; /* Borde más grueso */
+}
