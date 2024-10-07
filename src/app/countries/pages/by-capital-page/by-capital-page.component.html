@@ -1,6 +1,9 @@
 <h2>Por capital</h2>
 
 <hr>
+
+
+
 <div class="row">
   <div class="col">
     <!-- Search Box -->
@@ -13,7 +16,8 @@
   </div>
 
 </div>
-
+<app-ui-date-picker [(ngModel)]="selectedDate"></app-ui-date-picker>
+<p>Selected Date: {{ selectedDate | date }}</p>
 <div class="row">
   <div class="col">
     <hr>

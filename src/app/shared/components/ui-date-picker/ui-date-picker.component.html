@@ -1,0 +1,40 @@
+<div class="calendar">
+  <div class="calendar-header">
+    <span class="month-picker" id="month-picker">{{ month_names[curr_month.value] }}</span>
+    <div class="year-picker">
+      <span class="year-change" id="prev-year" (click)="prevYear()"><</span>
+      <span id="year">{{ curr_year.value }}</span>
+      <span class="year-change" id="next-year" (click)="nextYear()">></span>
+    </div>
+  </div>
+
+  <div class="calendar-body">
+    <div class="calendar-week-day">
+      <div *ngFor="let day of week_days">{{ day }}</div>
+    </div>
+    <div class="calendar-days">
+      <div *ngFor="let day of calendar_days">
+        <span
+          *ngIf="day !== null"
+          [ngClass]="{
+            'current-day': isCurrentDay(day),
+            'selected-day': selectedDate?.getDate() === day &&
+                            selectedDate?.getMonth() === curr_month.value &&
+                            selectedDate?.getFullYear() === curr_year.value
+          }"
+          (click)="selectDate(day)">
+          {{ day }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar-footer">
+    <div class="toggle">
+      <span>Dark Mode</span>
+      <div class="dark-mode-switch" (click)="toggleDarkMode()">
+        <div class="dark-mode-switch-ident" [ngClass]="{'active': isDarkMode}"></div>
+      </div>
+    </div>
+  </div>
+</div>

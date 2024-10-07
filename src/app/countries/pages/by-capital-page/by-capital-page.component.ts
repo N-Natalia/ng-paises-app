@@ -11,6 +11,7 @@ export class ByCapitalPageComponent {
 
   public countries: Country[] = []
   public isLoading: boolean = false;
+  selectedDate!: Date;
 
   constructor( private countryService: CountriesService){}
 

@@ -7,6 +7,7 @@ import { Router, RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { LoadingSpinerComponent } from './components/loading-spiner/loading-spiner.component';
+import { UIDatePickerComponent } from './components/ui-date-picker/ui-date-picker.component';
 
 
 
@@ -18,6 +19,7 @@ import { LoadingSpinerComponent } from './components/loading-spiner/loading-spin
     LoadingSpinerComponent,
     SearchBoxComponent,
     SidebarComponent,
+    UIDatePickerComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { LoadingSpinerComponent } from './components/loading-spiner/loading-spin
     LoadingSpinerComponent,
     SearchBoxComponent,
     SidebarComponent,
+    UIDatePickerComponent
   ]
 })
 export class SharedModule { }

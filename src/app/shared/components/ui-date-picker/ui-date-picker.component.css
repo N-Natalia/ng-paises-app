@@ -1,0 +1,154 @@
+.calendar {
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header styling (Month and Year navigation) */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.month-picker {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.year-change {
+  cursor: pointer;
+  padding: 0 8px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #666;
+}
+
+.year-change:hover {
+  color: #000;
+}
+
+#year {
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+/* Body styling (Days and Weekdays) */
+.calendar-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+/* Weekday names */
+.calendar-week-day {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.calendar-week-day div {
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+  color: #333;
+}
+
+/* Days grid */
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-days div {
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.calendar-days div:hover {
+  background-color: #eaeaea;
+}
+
+/* Active day (when clicked) */
+.calendar-days div.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Current day bubble */
+span.current-day {
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* Selected day */
+span.selected-day {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Empty days (before 1st of the month) */
+.calendar-days div:empty {
+  pointer-events: none;
+}
+
+/* Footer styling (Dark mode switch) */
+.calendar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dark-mode-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  margin-left: 8px;
+}
+
+.dark-mode-switch-ident {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.dark-mode-switch.active .dark-mode-switch-ident {
+  left: 22px;
+}
+
+/* Dark mode styles */
+body.dark .calendar {
+  background-color: #333;
+  color: #fff;
+}
+
